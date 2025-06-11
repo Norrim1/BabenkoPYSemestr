@@ -1,0 +1,9 @@
+from globals import bot
+from backScheduler import setup_backgroud_scheduler_handlers
+from handlers import setup_main_command_handlers, setup_misc_messages_handler
+
+setup_main_command_handlers(bot)
+setup_misc_messages_handler(bot)
+setup_backgroud_scheduler_handlers(bot)
+
+bot.polling()
